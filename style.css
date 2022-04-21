@@ -4,23 +4,23 @@
     top: 400px;
     width: 30px;
     height: 180px;
-    background-color: aqua;
-    border-radius: 60%;
+    background-color: blue;
+    border-radius: 50%;
 }
 
 #player2 {
     position: absolute;
-    left: 0px;
+    right: 0px;
     top: 400px;
     width: 30px;
-    height: 180px;
+    height: 120px;
     background-color: red;
-    border-radius: 60%;
+    border-radius: 50%;
 }
 
 #ball {
     position: absolute;
-    left: 0px;
+    left: 820px;
     top: 400px;
     width: 30px;
     height: 180px;
