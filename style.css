@@ -1,0 +1,29 @@
+#player1 {
+    position: absolute;
+    left: 0px;
+    top: 400px;
+    width: 30px;
+    height: 180px;
+    background-color: aqua;
+    border-radius: 60%;
+}
+
+#player2 {
+    position: absolute;
+    left: 0px;
+    top: 400px;
+    width: 30px;
+    height: 180px;
+    background-color: red;
+    border-radius: 60%;
+}
+
+#ball {
+    position: absolute;
+    left: 0px;
+    top: 400px;
+    width: 30px;
+    height: 180px;
+    background-color: black;
+    border-radius: 50%;
+}
