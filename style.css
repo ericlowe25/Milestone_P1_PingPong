@@ -21,7 +21,7 @@
 #ball {
     position: absolute;
     left: 820px;
-    top: 400px;
+    top: 10px;
     width: 30px;
     height: 180px;
     background-color: black;
