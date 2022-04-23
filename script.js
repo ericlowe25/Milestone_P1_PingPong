@@ -6,22 +6,21 @@
 var paddleHeight = 150;
 var paddleWidth = 30;
 var ballRadius = 25;
-var halfPaddleHeight = paddleHeight /2;
+var halfPaddleHeight = paddleHeight/2;
 var speedOfPaddle1 = 0;
 var speedOfPaddle2 = 0;
 var positionOfPaddle1 = 220;
-var positionOfPaddle2 = 220;
+var positionOfPaddle2 = 460;
 var topPositionOfBall = 510;
 var leftPositionOfBall = 820;
 var topSpeedOfBall = 10;
 var leftSpeedOfBall = 0;
-var topPositionOfBall = 510;
 var score1 = 0;
 var score2 = 0;
 
 // 2 players
 
-function starBall() {
+function startBall() {
     topPositionOfBall = 510;
     leftPositionOfBall = 820;
 
@@ -30,12 +29,14 @@ function starBall() {
     } else {
         var side = -1;
     }
-    topSpeedOfBall = Math.random() * -6 - 5;
-    leftSpeedOfBall = side * (Math.random() * 6 + 5);
+    
+    leftSpeedOfBall = side * (Math.random() * 6 + 5)
+    topSpeedOfBall = Math.random() * 6 + 5;
 }
 
 // from stack overflow: https://stackoverflow.com/questions/62600489/scroll-event-on-keydown-like-down-arrow-and-up-arrow
 // Had trouble making the paddles move up and down.
+
 document.addEventListener('keydown', function(e){
     // "W" key player1
     if(e.key == 'w' || e.keycode == 87) {
@@ -83,7 +84,7 @@ window.setInterval(function show() {
     positionOfPaddle2 += speedOfPaddle2;
 
     topPositionOfBall += topSpeedOfBall;
-    leftSpeedOfBall += leftSpeedOfBall;
+    leftPositionOfBall += leftSpeedOfBall;
 
 // Stop paddles from leaving top of window
     if(positionOfPaddle1 <= 1) {
@@ -104,23 +105,25 @@ window.setInterval(function show() {
     }
 
     // Make ball move
-    if(topPositionOfBall <= 150 || topPositionOfBall >= window.innerHeight - ballRadius) {
+    if(topPositionOfBall <= 10 || topPositionOfBall >= window.innerHeight - ballRadius) {
         topSpeedOfBall = - topSpeedOfBall
     }
     
     if(leftPositionOfBall <= paddleWidth) {
         if(topPositionOfBall > positionOfPaddle1 && topPositionOfBall < positionOfPaddle1 + paddleHeight){
-            leftSpeedOfBall = -leftSpeedOfBall;   
+            leftSpeedOfBall = - leftSpeedOfBall;   
         } else {
-            starBall();
+            score2++
+            startBall();
         }
     }
 
     if(leftPositionOfBall >= window.innerWidth - ballRadius - paddleWidth){
         if(topPositionOfBall > positionOfPaddle2 && topPositionOfBall < positionOfPaddle2 + paddleHeight){
-            leftSpeedOfBall = -leftSpeedOfBall; 
+            leftSpeedOfBall = - leftSpeedOfBall; 
         } else {
-            starBall();
+            score1++
+            startBall();
         }
     }
 
@@ -129,7 +132,9 @@ window.setInterval(function show() {
 
     document.getElementById('ball').style.top = (topPositionOfBall) + 'px';
     document.getElementById('ball').style.left = (leftPositionOfBall) + 'px';
-
+    
+    document.getElementById('score').innerHTML = score1.toString()
+    document.getElementById('score').innerHTML = score2.toString()
 
 
 

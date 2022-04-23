@@ -12,9 +12,9 @@ body {
     left: 0px;
     top: 460px;
     width: 30px;
-    height: 150px;
+    height: 130px;
     background-color: blue;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 #paddle2 {
@@ -22,9 +22,9 @@ body {
     right: 0px;
     top: 460px;
     width: 30px;
-    height: 150px;
+    height: 130px;
     background-color: red;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 #ball {
