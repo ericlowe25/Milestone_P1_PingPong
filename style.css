@@ -36,3 +36,11 @@ body {
     background-color: white;
     border-radius: 50%;
 }
+
+#net {
+    border-left: 6px dotted white;
+    height: 200%;
+    left: 820px;
+    position: fixed;
+   
+}

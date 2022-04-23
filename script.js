@@ -133,8 +133,8 @@ window.setInterval(function show() {
     document.getElementById('ball').style.top = (topPositionOfBall) + 'px';
     document.getElementById('ball').style.left = (leftPositionOfBall) + 'px';
     
-    document.getElementById('score').innerHTML = score1.toString()
-    document.getElementById('score').innerHTML = score2.toString()
+    document.getElementById('score1').innerHTML = score1.toString();
+    document.getElementById('score2').innerHTML = score2.toString();
 
 
 
