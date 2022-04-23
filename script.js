@@ -39,38 +39,38 @@ function startBall() {
 
 document.addEventListener('keydown', function(e){
     // "W" key player1
-    if(e.key == 'w' || e.keycode == 87) {
+    if(e.key == 'w') {
         speedOfPaddle1 = -10;
     }
     // "S" key player1
-    if(e.key == 's' || e.keycode == 83) {
+    if(e.key == 's') {
         speedOfPaddle1 = 10;
     }
     // "Up arrow" key player2
-    if(e.key == 'ArrowUp' || e.keycode == 38) {
+    if(e.key == 'ArrowUp' ) {
         speedOfPaddle2 = -10;
     }
     // "Down arrow" key player2
-    if(e.key == 'ArrowDown' || e.keycode == 40) {
+    if(e.key == 'ArrowDown') {
         speedOfPaddle2 = 10;
     }
 })
 
 document.addEventListener('keyup', function(e){
     // "W" key player1
-    if(e.key == 'w' || e.keycode== 87) {
+    if(e.key == 'w') {
         speedOfPaddle1 = 0;
     }
     // "S" key player1
-    if(e.key == 's' || e.keycode == 83) {
+    if(e.key == 's') {
         speedOfPaddle1 = 0;
     }
     // "Up arrow" key player2
-    if(e.key == 'ArrowUp' || e.keycode == 38) {
+    if(e.key == 'ArrowUp') {
         speedOfPaddle2 = 0;
     }
     // "Down arrow" key player2
-    if(e.key == 'ArrowDown' || e.keycode == 40) {
+    if(e.key == 'ArrowDown') {
         speedOfPaddle2 = 0;
     }
 })
