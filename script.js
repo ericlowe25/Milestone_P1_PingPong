@@ -56,7 +56,7 @@ document.addEventListener('keydown', function(e){
     }
 })
 
-document.addEventListener('keyup', function(e){
+ document.addEventListener('keyup', function(e){
     // "W" key player1
     if(e.key == 'w') {
         speedOfPaddle1 = 0;
@@ -104,7 +104,7 @@ window.setInterval(function show() {
         positionOfPaddle2 = window.innerHeight - paddleHeight
     }
 
-    // Make ball move
+    // Make ball move & connect with paddle when paddles move
     if(topPositionOfBall <= 10 || topPositionOfBall >= window.innerHeight - ballRadius) {
         topSpeedOfBall = - topSpeedOfBall
     }
@@ -114,6 +114,8 @@ window.setInterval(function show() {
             leftSpeedOfBall = - leftSpeedOfBall;   
         } else {
             score2++
+            var audio = new Audio('audio/tennisserve.wav')
+            audio.play()
             startBall();
         }
     }
@@ -123,6 +125,8 @@ window.setInterval(function show() {
             leftSpeedOfBall = - leftSpeedOfBall; 
         } else {
             score1++
+            var audio = new Audio('audio/tennisserve.wav')
+            audio.play()
             startBall();
         }
     }

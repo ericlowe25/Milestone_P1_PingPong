@@ -4,5 +4,10 @@ PING PONG is a two-player game that involes two paddles and a moving ball. THe p
 
 Direction to play:
 
-Player 1: (PADDLE_1 _ BLUE) by using the ‘W‘ key to move up and to go down ‘S‘ key should be used.
-Player 2: (PADDLE_2 _ RED)  by using the ‘UP Arrow‘ key to move up and to go down ‘Down Arrow‘ key should be used.
+Player 1: (PADDLE_1 _ BLUE) by using the ‘W‘ key to move up and to go down use the ‘S‘ key.
+Player 2: (PADDLE_2 _ RED)  by using the ‘UP Arrow‘ key to move up and to go down use the ‘Down Arrow‘ key.
+
+
+
+
+
