@@ -30,12 +30,10 @@ function starBall() {
     } else {
         var side = -1;
     }
-
-    leftSpeedOfBall = side * (Math.random() * 6 + 5)
-    topSpeedOfBall = Math.random() * 6 + 5;
-
-
+    topSpeedOfBall = Math.random() * -6 - 5;
+    leftSpeedOfBall = side * (Math.random() * 6 + 5);
 }
+
 // from stack overflow: https://stackoverflow.com/questions/62600489/scroll-event-on-keydown-like-down-arrow-and-up-arrow
 // Had trouble making the paddles move up and down.
 document.addEventListener('keydown', function(e){
@@ -59,19 +57,19 @@ document.addEventListener('keydown', function(e){
 
 document.addEventListener('keyup', function(e){
     // "W" key player1
-    if(e.keycode == 'w' || e.number == 87) {
+    if(e.key == 'w' || e.keycode== 87) {
         speedOfPaddle1 = 0;
     }
     // "S" key player1
-    if(e.keycode == 's' || e.number == 83) {
+    if(e.key == 's' || e.keycode == 83) {
         speedOfPaddle1 = 0;
     }
     // "Up arrow" key player2
-    if(e.keycode == 'ArrowUp' || e.number == 38) {
+    if(e.key == 'ArrowUp' || e.keycode == 38) {
         speedOfPaddle2 = 0;
     }
     // "Down arrow" key player2
-    if(e.keycode == 'ArrowDown' || e.number == 40) {
+    if(e.key == 'ArrowDown' || e.keycode == 40) {
         speedOfPaddle2 = 0;
     }
 })
@@ -105,7 +103,8 @@ window.setInterval(function show() {
         positionOfPaddle2 = window.innerHeight - paddleHeight
     }
 
-    if(topPositionOfBall <= 10 || topPositionOfBall >= window.innerHeight - ballRadius) {
+    // Make ball move
+    if(topPositionOfBall <= 150 || topPositionOfBall >= window.innerHeight - ballRadius) {
         topSpeedOfBall = - topSpeedOfBall
     }
     
