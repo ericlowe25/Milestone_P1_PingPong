@@ -1,4 +1,6 @@
-PING PONG GAME
+PING PONG GAME 
+
+
 
 PING PONG is a two-player game that involes two paddles and a moving ball. THe players have to move the paddles in an upwards or downwards direction and save the ball from getting hit onto the wall. If the ball hits the wall then it is a score for the other player.
 
